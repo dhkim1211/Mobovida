@@ -1,0 +1,42 @@
+.product-featured-image {
+  width: 100%;
+}
+.product-compare-at-price {
+  text-decoration: line-through;
+}
+.product-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+  display: table-cell;
+}
+.page-title-wrapper {
+  text-align: center;
+}
+.sort-by-wrapper {
+  margin: 20px 0;
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.filter-option-inner-wrapper {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-top: 20px;
+}
+.price-filter {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+.product-image-wrapper {
+  min-height: 150px;
+}
+.product-container-outer {
+  padding: 5px;
+}
+.product-title {
+  height: 60px;
+}

@@ -130,15 +130,24 @@ function sortProducts(products) {
 
 function appendProducts(product) {
   var productTitle = product.title.length < 70 ? product.title : jQuery.trim(product.title).substring(0, 70).split(" ").slice(0, -1).join(" ") + "...";
+  var productImage = product.images.length ? product.images[0].src : 'https://screenshotlayer.com/images/assets/placeholder.png';
+  var productPrice = product.variants[0].price;
+  var productComparePrice = product.variants[0].compare_at_price;
 
   $('.product-wrapper').append(
     '<div class="col-md-3 col-sm-4 col-xs-6 product-container-outer"> \
       <div class="product-container"> \
-        <p class="product-title">' + productTitle + '</p> \
+        <a href="#"> \
+          <p class="product-title">' + productTitle + '</p> \
+        </a> \
         <div class="product-image-wrapper"> \
-          <img src="' + product.images[0].src + '" alt="' + product.title + '" class="product-featured-image"/> \
+          <a href="#"> \
+            <img src="' + productImage + '" alt="' + productTitle + '" class="product-featured-image"/> \
+          </a> \
         </div> \
-        <p class="product-price"> $' + product.variants[0].price + '<span class="product-compare-at-price"> $' + product.variants[0].compare_at_price + '</span></p> \
+        <p class="product-compare-at-price">Retail Price: $' + productComparePrice + '</p> \
+        <p class="product-price">Wholesale Price: $' + productPrice + '</p> \
+        <button class="btn btn-primary">More Info</button> \
       </div> \
     </div>'
   )
@@ -150,7 +159,6 @@ function displayExistingFilters() {
 
   $('input[type="checkbox"]').each(function() {
     var $this = $(this);
-    console.log('this', $(this).val())
     $.each(filterQueries, function(i, query) {
       if ($this.val() == query) {
         $this.attr('checked', true);

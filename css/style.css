@@ -25,6 +25,10 @@
   padding: 10px;
   margin-top: 20px;
 }
+.filter-title {
+  font-weight: 500;
+  font-size: 16px;
+}
 .price-filter {
   margin-bottom: 15px;
   border-bottom: 1px solid #eee;
@@ -39,4 +43,11 @@
 }
 .product-title {
   height: 60px;
+}
+.product-compare-at-price {
+  margin-top: 20px;
+  color: lightgray;
+}
+.product-price {
+  font-weight: 500;
 }
